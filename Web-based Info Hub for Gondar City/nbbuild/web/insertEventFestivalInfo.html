@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Festival and Event Information</title>
+    <link rel="stylesheet" href="festivalAdminPageStyle.css">
+     <script src="ErrorHandling.js"></script>
+</head>
+<body>
+    <h1>Festival and Event Admin Dashboard</h1>
+    <nav>
+        <ul>
+			<li><a href="Festival_and_Event_Admin_Dashboard.html">Home</a></li>
+            <li><a href="/insertEventFestivalInfo">Insert Event Festival Information</a></li>
+            <li><a href="/viewEventFestivalInfo">View Event Festival Information</a></li>
+            <li><a href="/reportIssue">Report an Issue</a></li>
+            <li><a href="/logout">Sign Out</a></li>
+        </ul>
+    </nav>
+
+    <section class="form-section">
+        <h2>Insert Event Festival Information</h2>
+        <form action="EventFestivalInfoServlet" method="post">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" maxlength="100" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" maxlength="255" required>
+
+            <label for="contact">Contact:</label>
+            <input type="text" id="contact" name="contact" maxlength="50" required>
+
+            <label for="operatingHours">Operating Hours:</label>
+            <input type="text" id="operatingHours" name="operatingHours" maxlength="50" required>
+
+            <label for="startDate">Start Date:</label>
+            <input type="datetime-local" id="startDate" name="startDate" required>
+
+            <label for="endDate">End Date:</label>
+            <input type="datetime-local" id="endDate" name="endDate" required>
+
+            <label for="organizer">Organizer:</label>
+            <input type="text" id="organizer" name="organizer" maxlength="50" required>
+
+            <label for="ticketInformation">Ticket Information:</label>
+            <textarea id="ticketInformation" name="ticketInformation" required></textarea>
+
+            <label for="image">Upload Image:</label>
+            <input type="file" id="image" name="image" accept="image/*"
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <div id="errorDiv"></div>
+</body>
+</html>

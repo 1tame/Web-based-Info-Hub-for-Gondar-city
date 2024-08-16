@@ -1,0 +1,72 @@
+@charset "ISO-8859-1";
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light grey background */
+    color: #333;
+}
+
+/* Navigation Bar Styles */
+nav {
+    background-color: #333; /* Dark background color for nav */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333; /* Dark background color for nav */
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: white; /* White color for links */
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #4CAF50; /* Green background on hover */
+}
+
+/* Form Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Form Styles */
+form {
+    background-color: #ffffff; /* White background for the form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for form */
+    width: 100%;
+    max-width: 400px; /* Limit the maximum width of the form */
+}
+
+/* Form Heading */
+h1 {
+    text-align: center;
+    color: #007bff; /* Light blue color for heading */
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+/* Form Elements */
+label {
+    display: block;
+    margin-bottom: 8px;
+}

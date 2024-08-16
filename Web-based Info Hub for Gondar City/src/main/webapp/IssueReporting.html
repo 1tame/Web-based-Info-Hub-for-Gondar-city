@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report an Issue</title>
+    <link rel="stylesheet" href="ReportIssueStyle.css">
+</head>
+<body>
+    <h1>Issue Reporting Dashboard</h1>
+    <nav>
+        <ul id="adminNav">
+            <!-- Dynamic content will be inserted here -->
+            <li><a href="javascript:history.back()">Go Back</a></li>
+            <li><a href="/logout">Sign Out</a></li>
+        </ul>
+    </nav>
+
+    <section class="form-section">
+        <h2>Report an Issue</h2>
+        <form id="issueForm">
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="reportedBy">Reported By (User ID):</label>
+            <input type="number" id="reportedBy" name="reportedBy" required>
+
+            <label for="reportedDate">Reported Date:</label>
+            <input type="date" id="reportedDate" name="reportedDate" required>
+
+            <button type="submit">Submit</button>
+        </form>
+        <p id="responseMessage"></p> <!-- Element to show the response message -->
+    </section>
+
+    <script>
+        document.getElementById("issueForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+
+            var formData = new FormData(this);
+
+            fetch("/submitIssue", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.text())
+            .then(result => {
+                let responseMessage = document.getElementById("responseMessage");
+                if (result === "success") {
+                    responseMessage.textContent = "Issue reported successfully!";
+                    responseMessage.style.color = "green";
+                } else {
+                    responseMessage.textContent = "Failed to report the issue. Please try again.";
+                    responseMessage.style.color = "red";
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                let responseMessage = document.getElementById("responseMessage");
+                responseMessage.textContent = "An error occurred. Please try again.";
+                responseMessage.style.color = "red";
+            });
+        });
+    </script>
+</body>
+</html>

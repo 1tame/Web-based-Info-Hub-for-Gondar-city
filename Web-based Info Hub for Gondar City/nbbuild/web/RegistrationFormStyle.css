@@ -1,0 +1,103 @@
+@charset "ISO-8859-1";
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light grey background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Navigation Bar Styles */
+nav {
+    background-color: #333; /* Dark background color for nav */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333; /* Dark background color for nav */
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: white; /* White color for links */
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #bbb; /* Light grey background on hover */
+}
+
+/* Form Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff; /* White background for container */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for container */
+}
+
+/* Form Styles */
+form {
+    width: 100%;
+    max-width: 400px; /* Limit the maximum width of the form */
+}
+
+/* Form Heading */
+h1 {
+    text-align: center;
+    color: #555; /* Medium grey color for heading */
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+/* Form Elements */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555; /* Medium grey for labels */
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+input[type="submit"] {
+    background-color: #d3d3d3; /* Light grey background for submit button */
+    color: #333; /* Darker text color */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+input[type="submit"]:hover {
+    background-color: #bbb; /* Light grey background on hover */
+}

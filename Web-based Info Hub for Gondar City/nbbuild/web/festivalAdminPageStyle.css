@@ -1,0 +1,138 @@
+@charset "ISO-8859-1";
+/* AdminsNavigation.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7; /* Light cream background */
+    color: #333; /* Light black text */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: #444; /* Darker light black for headings */
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #ccc; /* Silver background for nav */
+    padding: 10px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333; /* Light black text */
+    font-weight: bold;
+    padding: 8px 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #e6e6e6; /* Lighter silver on hover */
+    color: #111; /* Darker black on hover */
+}
+
+/* Form Section Styles */
+.form-section {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff; /* White background for form section */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555; /* Light black for labels */
+}
+
+input[type="text"],
+input[type="datetime-local"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Silver border */
+    border-radius: 4px;
+    background-color: #f7f7f7; /* Light cream input background */
+    color: #333; /* Light black text in inputs */
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ccc; /* Silver button background */
+    color: #333; /* Light black text */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #b3b3b3; /* Darker silver on hover */
+    color: #111; /* Darker black on hover */
+}
+
+/* Additional Styles */
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding: 20px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ccc; /* Silver footer background */
+    color: #333; /* Light black footer text */
+    margin-top: 40px;
+    border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .form-section {
+        width: 95%;
+    }
+}

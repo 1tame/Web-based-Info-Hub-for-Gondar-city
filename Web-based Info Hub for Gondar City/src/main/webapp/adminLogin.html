@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="Style1.css">
+      <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const errorMessage = urlParams.get('errorMessage');
+            if (errorMessage) {
+                const errorDiv = document.getElementById("errorDiv");
+                errorDiv.innerHTML = "<p style='color:red;'>" + errorMessage + "</p>";
+            }
+        };
+    </script>
+
+</head>
+<body>
+    <div id="loginPage">
+        <h2>Admin Login</h2>
+        <form action="/admin-dashboard" method="POST">
+            <label for="role">Select Role:</label>
+            <select id="role" name="role" required>
+                <option value="systemAdmin">System Admin</option>
+                <option value="waterSupplyAdmin">Water Supply Admin</option>
+                <option value="healthSectorAdmin">Health Sector Admin</option>
+                <option value="securityAdmin">Security Admin</option>
+                <option value="tourismHotelAdmin">Tourism & Hotel Admin</option>
+                <option value="festivalEventAdmin">Festival & Event Admin</option>
+                <option value="transportationAdmin">Transportation Admin</option>
+            </select>
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <div class="general-options">
+            <h3>General Options</h3>
+            <ul>
+                <li><a href="javascript:history.back()">Go Back</a></li>
+                <li><a href="#">Forgot Password?</a></li>
+                <li><a href="#">Help & Support</a></li>
+                <li><a href="#">Return to Main Website</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="errorDiv"></div>
+    
+</body>
+</html>
